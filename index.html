@@ -3,34 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 </head>
 
 <body>
     <div id="calBody">
         <div id="display">
             <div id="previous">
-                <p id="prev">444 + 666</p>
+                <p id="prev"></p>
             </div>
             <div id="current">
-                <p id="currentType">45</p>
+                <p id="currentType">0</p>
             </div>
         </div>
         <div id="btnContainer">
             <div class="row">
-                <button class="numBtn" id="clear">AC</button>
-                <button class="numBtn" id="backspace">CE</button>
-                <button class="numBtn" id="percent">%</button>
-                <button class="symBtn" id="divide">/</button>
+                <button class="extraBtn" id="backspace">⌫</button>
+                <button class="extraBtn" id="clear">C</button>
+                <button class="extraBtn" id="negative">+/-</button>
+                <button class="symBtn" id="divide">÷</button>
             </div>
             <div class="row">
                 <button class="numBtn" id="seven">7</button>
                 <button class="numBtn" id="eight">8</button>
                 <button class="numBtn" id="nine">9</button>
-                <button class="symBtn" id="product">*</button>
+                <button class="symBtn" id="product">×</button>
             </div>
             <div class="row">
                 <button class="numBtn" id="four">4</button>
