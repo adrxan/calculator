@@ -1,0 +1,154 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-color);
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+  --body-color: #181818;
+  --accent-color: #ec5e2c;
+  --button-color: #2d2d2d;
+  --bg-color: #121212;
+  --neutral-color: #9f9f9f;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+/* ----- */
+#calBody {
+  width: 365px;
+  margin: 5vh auto;
+  height: auto;
+  padding: 25px 18px;
+  border-radius: 25px;
+  border: 1px solid rgba(149, 149, 149, 0.116);
+  background-color: var(--body-color);
+}
+
+#btnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: right;
+  height: 175px;
+  background-color: #282828;
+  background-image: linear-gradient(#282828, #2f2f2f);
+  border: 1px solid rgba(149, 149, 149, 0.069);
+  border-radius: 20px;
+  margin-bottom: 35px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+
+}
+
+#display > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  height: 50%;
+  padding: 0px 20px;
+}
+
+#prev {
+  color: rgb(174, 174, 174);
+  font-weight: 500;
+  font-size: 1.2em;
+  padding-bottom: 10px;
+}
+
+#current {
+  color: white;
+  font-size: 4em;
+  font-weight: 500;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  -webkit-user-select: none;
+  /-moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 1px solid rgba(149, 149, 149, 0.116);
+  background-image: linear-gradient(#ffffff00, #ffffff05);
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#zero {
+  width: 150px;
+  border-radius: 75px;
+  text-align: left;
+  padding-left: 35px;
+}
+
+.symBtn {
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: 800;
+}
+
+.numBtn {
+  background-color: var(--button-color);
+  color: white;
+}
+
+.extraBtn {
+  background-color: var(--neutral-color);
+  color: var(--button-color);
+}
