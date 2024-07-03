@@ -63,6 +63,8 @@ h6 {
   border-radius: 25px;
   border: 1px solid rgba(149, 149, 149, 0.116);
   background-color: var(--body-color);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 #btnContainer {
@@ -80,20 +82,20 @@ h6 {
   height: 175px;
   background-color: #282828;
   background-image: linear-gradient(#282828, #2f2f2f);
-  border: 1px solid rgba(149, 149, 149, 0.069);
+  border: 1px solid rgba(125, 125, 125, 0.069);
   border-radius: 20px;
   margin-bottom: 35px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;
-
 }
 
 #display > div {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   height: 50%;
   padding: 0px 20px;
 }
@@ -125,9 +127,11 @@ button {
   height: 75px;
   border-radius: 50%;
   border: 1px solid rgba(149, 149, 149, 0.116);
-  background-image: linear-gradient(#ffffff00, #ffffff05);
+  background-image: linear-gradient(#ffffff00, #ffffff09);
   text-align: center;
   font-size: 1.5em;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 #zero {
