@@ -106,7 +106,7 @@ opBtn.forEach((button) => {
       operate(operator, currentNum, prevNum);
       operator = button.textContent;
       prevNum = answer;
-      prevDisp.textContent = `${Math.round(answer)}  ${operator}`;
+      prevDisp.textContent = `${answer}  ${operator}`;
       currentDisp.textContent = "0";
       currentNum = "";
       answer = "";
