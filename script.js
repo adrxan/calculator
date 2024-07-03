@@ -97,6 +97,17 @@ decimal.addEventListener("click", () => {
   }
 });
 
+backspace.addEventListener("click", () => {
+  if (currentDisp.textContent !== "") {
+    currentNum = currentNum.slice(0, -1);
+    if (currentNum === "") {
+      currentDisp.textContent = "0";
+    } else {
+      currentDisp.textContent = currentNum;
+    }
+  }
+});
+
 numBtn.forEach((button) => {
   button.addEventListener("click", () => {
     updateDecimalButtonState();
