@@ -109,8 +109,12 @@ h6 {
 
 #current {
   color: white;
-  font-size: 4em;
+  font-size: 68px;
   font-weight: 500;
+}
+
+#currentType {
+  direction: rtl;
 }
 
 .row {
