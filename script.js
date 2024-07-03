@@ -33,10 +33,10 @@ function operate(operator, currentNum, prevNum) {
     case "-":
       answer = subtract(num1, num2);
       break;
-    case "*":
+    case "×":
       answer = multiply(num1, num2);
       break;
-    case "/":
+    case "÷":
       answer = divide(num1, num2);
       break;
     default:
@@ -70,14 +70,49 @@ clear.addEventListener("click", () => {
   answer = "";
   prevDisp.textContent = "";
   currentDisp.textContent = "0";
+  decimal.disabled = false;
+});
+
+function toggleNeg(numStr) {
+  let num = parseFloat(numStr);
+  num = -num;
+  return num.toString();
+}
+
+negative.addEventListener("click", () => {
+  if (currentNum !== "") {
+    currentNum = toggleNeg(currentNum);
+    currentDisp.textContent = currentNum;
+  }
+});
+
+function updateDecimalButtonState() {
+  decimal.disabled = currentDisp.textContent.includes(".");
+}
+
+decimal.addEventListener("click", () => {
+  if (!currentDisp.textContent.includes(".")) {
+    currentDisp.textContent += ".";
+    updateDecimalButtonState();
+  }
 });
 
 numBtn.forEach((button) => {
   button.addEventListener("click", () => {
-    if (button.textContent === "0" && currentDisp.textContent !== "0") {
+    updateDecimalButtonState();
+    if (currentNum === answer && prevDisp.textContent === "") {
+      currentDisp.textContent = "";
+      currentNum = "";
+      answer = "";
       currentNum += button.textContent;
       currentDisp.textContent = currentNum;
-    } else if (button.textContent !== "0") {
+    } else if (button.textContent === "0" && currentDisp.textContent !== "0") {
+      currentNum += button.textContent;
+      currentDisp.textContent = currentNum;
+    } else if (
+      button.textContent !== "0" &&
+      currentDisp.textContent !== answer.toString()
+    ) {
       currentNum += button.textContent;
       currentDisp.textContent = currentNum;
     }
