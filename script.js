@@ -43,12 +43,12 @@ function operate(operator, currentNum, prevNum) {
       console.error("Invalid operator");
       return;
   }
-  answer = Math.round(answer * 100) / 100; // Round to 2 decimal places
-  currentDisp.textContent = answer;
-  prevDisp.textContent = "";
-  currentNum = answer.toString();
-  prevNum = "";
-  operator = "";
+  answer = Math.round(answer * 100) / 100;
+    currentDisp.textContent = `${answer}`;
+    prevDisp.textContent = "";
+    currentNum = answer.toString();
+    prevNum = "";
+    operator = "";
 }
 
 const numBtn = document.querySelectorAll(".numBtn");
@@ -72,6 +72,12 @@ clear.addEventListener("click", () => {
   currentDisp.textContent = "0";
   decimal.disabled = false;
 });
+
+function checkIfZero() {
+    if (currentNum === "0" && currentDisp.textContent === "0") {
+        clear.click();
+    }
+}
 
 function toggleNeg(numStr) {
   let num = parseFloat(numStr);
@@ -170,5 +176,6 @@ opBtn.forEach((button) => {
       operator = "";
       answer = "";
     }
+    checkIfZero();
   });
 });
