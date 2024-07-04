@@ -63,6 +63,17 @@ const decimal = document.querySelector("#decimal");
 const prevDisp = document.getElementById("prev");
 const currentDisp = document.querySelector("#currentType");
 
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    
+    setTimeout(() => {
+      this.blur();
+    }, 0);
+  });
+});
+
 clear.addEventListener("click", () => {
   currentNum = "";
   operator = "";
